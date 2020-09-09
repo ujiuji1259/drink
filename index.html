@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>一行日記</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" crossorigin="anonymous"></script>
+
+        <link href="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/core/main.css" rel="stylesheet">
+        <link href="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/daygrid/main.css" rel="stylesheet">
+        <link href="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/timegrid/main.css" rel="stylesheet">
+        <script src="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/core/main.js"></script>
+        <script src="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/interaction/main.js"></script>
+        <script src="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/daygrid/main.js"></script>
+        <script src="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/timegrid/main.js"></script>
+        <script src="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/core/locales-all.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://aoi.naist.jp/~ujiie/drink_common.css">
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                    var calendarEl = document.getElementById('calendar');
+
+                    var calendar = new FullCalendar.Calendar( calendarEl, {
+                        plugins: ['dayGrid', 'interaction'],
+                        locale: 'ja',
+                        buttonIcons: false,
+                        events: {
+                            url: 'data'
+                        },
+                        dateClick: function(info) {
+                            let date = new Date();
+                            let d2 = info.date;
+                            let date_list = {{date_list|tojson}};
+                            if (d2 > date) {
+                                $("#checkModal2").modal('show');
+                            } else {
+                                let d = info.dateStr.split("-");
+                                let d_str = d[0] + "-" + toDoubleDigits(d[1]) + "-" + toDoubleDigits(d[2]);
+                                if (date_list.includes(d_str)) $("#checkModal").modal('show');
+                                else location.href = local + 'diary/' + d_str;
+                            }
+                        },
+                        eventRender: function(info) {
+                            if (info.event.extendedProps.imageurl) {
+                                info.el.querySelector(".fc-title").innerHTML = "<img class='photo' src='" + info.event.extendedProps.imageurl + "' width='100%'>";
+                                info.el.style.backgroundColor = "transparent";
+                                info.el.style.borderColor = "transparent";
+                            }
+                            info.el.onclick=function(){
+                                let d = info.event.start;
+                                location.href = local + 'past_data/' + d.getFullYear() + "-" + toDoubleDigits(d.getMonth()+1) + "-" + toDoubleDigits(d.getDate());
+                            }
+                        }
+                        });
+
+                    calendar.render();
+                    });
+        </script>
+
+        <script>
+            var local = window.location;
+            var toDoubleDigits = function (num) {
+                num += "";
+                if (num.length === 1) {
+                    num = "0" + num;
+                }
+                return num;
+            }
+
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+            let current_date = year + "-" + toDoubleDigits(month) + "-" + toDoubleDigits(day);
+
+            function jump2(){
+                let date_list = {{date_list|tojson}};
+                if (date_list.includes(current_date)) $("#checkModal").modal('show');
+                else location.href = local + 'diary/' + current_date;
+            }
+            function jump_logout(){
+                location.href = local + 'logout';
+            }
+            function jump_admin(){
+                location.href = local + 'admin';
+            }
+        </script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="/"><img src="http://aoi.naist.jp/~ujiie/naist_logo.jpg" alt="" style="max-height:50px;"></a>
+            <a class="navbar-brand" href="/"><img src="http://aoi.naist.jp/~ujiie/unnamed.png" alt="" style="max-height:50px;"></a>
+            <p class="navbar-brand">一行日記</p>
+            <ul class="navbar-nav">
+                {% if current_user.name == "admin" %}
+                <li class="nav-item">
+                    <a href='javascript: jump_admin();' class="nav-link">管理画面</a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a href='javascript: jump_logout();' class="nav-link">ログアウト</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="container-fluid">
+            <div class="row mt-3">
+                <div class="col-md-2"></div>
+
+                <div class="col-md-8 text-center">
+                    <h2>{{name}}さん</h2>
+                </div>
+
+                <div class="col-md-2 mx-auto">
+                    <form action='javascript: jump2()'>
+                        <button class="btn btn-info btn-lg btn-block">日記を書く</button>
+                    </form>
+                </div>
+            </div>
+            <div id='calendar' style="margin: 50px 0px;"></div>
+        </div>
+
+        <div class="modal in" id="checkModal2" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">確認</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>未来の日記を書くことはできません</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal in" id="checkModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">確認</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>今日は日記を送信済みです．明日、またお待ちしています。</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

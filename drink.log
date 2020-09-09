@@ -1,0 +1,1662 @@
+2020-06-11 20:24:13,142 - demo - INFO - hello world
+2020-06-11 20:24:53,233 - demo - ERROR - Exception on /analysis/どうしてもビールが飲みたかったから [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 51, in analysis
+    annotated = Markup(ner.add_tag(text))
+NameError: name 'ner' is not defined
+2020-06-11 20:30:30,343 - demo - INFO - hello world
+2020-06-11 20:30:38,718 - demo - ERROR - Exception on /analysis/どうしてもビールが飲みたかったから [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 53, in analysis
+    annotated = Markup(ner.add_tag(text))
+NameError: name 'ner' is not defined
+2020-06-11 20:34:49,775 - demo - INFO - hello world
+2020-06-11 20:35:47,153 - demo - INFO - hello world
+2020-06-11 20:35:53,807 - demo - ERROR - Exception on /analysis/飲みたかったから [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 54, in analysis
+    return redirect(url_for("drink"))
+NameError: name 'ner' is not defined
+2020-06-11 20:40:06,121 - demo - INFO - {0: 'badge-gray', 1: 'badge-silver', 2: 'badge-blue', 3: 'badge-navy', 4: 'badge-teal', 5: 'badge-green', 6: 'badge-lime', 7: 'badge-aqua', 8: 'badge-yellow', 9: 'badge-red', 10: 'badge-fuchsia', 11: 'badge-olive', 12: 'badge-purple', 13: 'badge-maroon'}
+2020-06-11 20:40:06,121 - demo - INFO - hello world
+2020-06-15 16:30:38,245 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 82, in login
+    login_user(users[username])
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/utils.py", line 170, in login_user
+    session['_user_id'] = user_id
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 351, in __setitem__
+    self._get_current_object()[key] = value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/sessions.py", line 103, in _fail
+    "The session is unavailable because no secret "
+RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2020-06-15 16:31:13,766 - demo - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 92, in top_page
+    if current_user.is_authenticated:
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 307, in _get_current_object
+    return self.__local()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "demo.py", line 70, in load_user
+    return User.get(user_id)
+AttributeError: type object 'User' has no attribute 'get'
+2020-06-15 16:32:30,849 - demo - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 92, in top_page
+    if current_user.is_authenticated:
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 307, in _get_current_object
+    return self.__local()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "demo.py", line 70, in load_user
+    return User.query.get(user_id)
+AttributeError: type object 'User' has no attribute 'query'
+2020-06-15 16:32:33,520 - demo - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 92, in top_page
+    if current_user.is_authenticated:
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 307, in _get_current_object
+    return self.__local()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "demo.py", line 70, in load_user
+    return User.query.get(user_id)
+AttributeError: type object 'User' has no attribute 'query'
+2020-06-15 16:32:35,111 - demo - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 92, in top_page
+    if current_user.is_authenticated:
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 307, in _get_current_object
+    return self.__local()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "demo.py", line 70, in load_user
+    return User.query.get(user_id)
+AttributeError: type object 'User' has no attribute 'query'
+2020-06-15 16:34:03,357 - demo - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 93, in top_page
+    if current_user.is_authenticated:
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 307, in _get_current_object
+    return self.__local()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask_login/login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "demo.py", line 71, in load_user
+    return User.get(user_id)
+AttributeError: type object 'User' has no attribute 'get'
+2020-06-15 16:42:22,349 - demo - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 95, in top_page
+    print(current_user.name)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'name'
+2020-06-15 16:44:42,588 - demo - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 95, in top_page
+    if current_user.is_authenticated():
+TypeError: 'bool' object is not callable
+2020-06-15 16:46:48,727 - demo - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 96, in top_page
+    if current_user.is_authenticated():
+TypeError: 'bool' object is not callable
+2020-06-15 17:12:44,752 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 93, in login
+    login_user(users[userid], remember=form.remember_me.data)
+NameError: name 'form' is not defined
+2020-06-15 18:25:00,107 - demo - ERROR - Exception on /drink [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 151, in drink
+    alc = {w:request.form.get(w) for w in liqueur.keys()}
+NameError: name 'liqueur' is not defined
+2020-06-15 18:25:41,377 - demo - ERROR - Exception on /drink [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 151, in drink
+    alc = {w:request.form.get(w) for w in liqueur.keys()}
+NameError: name 'liqueur' is not defined
+2020-06-15 20:49:29,808 - demo - ERROR - Exception on /analysis/どうしてもビールが飲みたかったから [GET]
+Traceback (most recent call last):
+  File "demo.py", line 184, in add_user_information
+    user_information[current_user.name][dt_now] = res
+NameError: name 'user_information' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 193, in analysis
+    add_user_information(tags, nes, text)
+  File "demo.py", line 186, in add_user_information
+    user_information[current_user.name] = {dt_now:res}
+NameError: name 'user_information' is not defined
+2020-06-15 20:55:51,125 - demo - ERROR - Exception on /drink [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 168, in drink
+    calc_alc(request.form)
+  File "demo.py", line 160, in calc_alc
+    json.dump(drink_information[current_user], f, ensure_ascii=False)
+KeyError: <__main__.User object at 0x7f749a039b00>
+2020-06-15 21:11:59,935 - demo - ERROR - Exception on /diary [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 151, in diary
+    if dt_now in user_information[current_user.name]:
+KeyError: 'sociocom'
+2020-06-15 21:13:32,672 - demo - ERROR - Exception on /diary [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 156, in diary
+    if dt_now in user_information[current_user.name]:
+KeyError: 'sociocom'
+2020-06-15 21:13:34,284 - demo - ERROR - Exception on /diary [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 156, in diary
+    if dt_now in user_information[current_user.name]:
+KeyError: 'sociocom'
+2020-06-15 21:15:00,948 - demo - ERROR - Exception on /diary [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 156, in diary
+    if dt_now in user_information[current_user.name]:
+KeyError: 'sociocom'
+2020-06-15 21:18:29,326 - demo - ERROR - Exception on /analysis/どうしてもビールが飲みたかったから [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "demo.py", line 234, in analysis
+    return render_template("analysis.html", text=annotated, tags=tags + nes)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ujiie/narrative/analysis.html", line 38, in top-level template code
+    {% for t, w in tags %}
+ValueError: too many values to unpack (expected 2)
+2020-06-18 13:47:47,929 - demo - ERROR - Exception on /analysis/禁酒を決め会社の飲み会も行かないを徹底してたのにある日##お疲れ様会と題したタダ飲み会に誘惑に負けて参加したら久しぶりのビールに感動してまた飲みだした。 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 242, in analysis
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+  File "/home/ujiie/narrative/demo.py", line 242, in <listcomp>
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+KeyError: '付き合い'
+2020-06-18 13:48:01,063 - demo - ERROR - Exception on /analysis/禁酒を決め会社の飲み会も行かないを徹底してたのにある日##お疲れ様会と題したタダ飲み会に誘惑に負けて参加したら久しぶりのビールに感動してまた飲みだした。 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 242, in analysis
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+  File "/home/ujiie/narrative/demo.py", line 242, in <listcomp>
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+KeyError: '付き合い'
+2020-06-18 18:03:40,898 - demo - ERROR - Exception on /analysis/禁酒を決め会社の飲み会も行かないを徹底してたのにある日##お疲れ様会と題したタダ飲み会に誘惑に負けて参加したら久しぶりのビールに感動してまた飲みだした。 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 242, in analysis
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+  File "/home/ujiie/narrative/demo.py", line 242, in <listcomp>
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+KeyError: '付き合い'
+2020-06-18 21:51:42,478 - demo - ERROR - Exception on /analysis/None [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 244, in analysis
+    add_user_information(tags, nes, text)
+  File "/home/ujiie/narrative/demo.py", line 227, in add_user_information
+    if dt_now in user_information[current_user.name]:
+KeyError: 'sociocom'
+2020-06-18 21:51:47,718 - demo - ERROR - Exception on /analysis/None [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 244, in analysis
+    add_user_information(tags, nes, text)
+  File "/home/ujiie/narrative/demo.py", line 227, in add_user_information
+    if dt_now in user_information[current_user.name]:
+KeyError: 'sociocom'
+2020-06-18 21:51:55,083 - demo - ERROR - Exception on /analysis/fawef [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 244, in analysis
+    add_user_information(tags, nes, text)
+  File "/home/ujiie/narrative/demo.py", line 227, in add_user_information
+    if dt_now in user_information[current_user.name]:
+KeyError: 'sociocom'
+2020-06-18 21:52:01,740 - demo - ERROR - Exception on /analysis/None [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 244, in analysis
+    add_user_information(tags, nes, text)
+  File "/home/ujiie/narrative/demo.py", line 227, in add_user_information
+    if dt_now in user_information[current_user.name]:
+KeyError: 'sociocom'
+2020-06-22 15:04:55,412 - demo - ERROR - Exception on /analysis/None [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 244, in analysis
+    add_user_information(tags, nes, text)
+  File "/home/ujiie/narrative/demo.py", line 224, in add_user_information
+    dt_now = date[current_user.name]
+KeyError: 'sociocom'
+2020-06-23 11:23:38,134 - demo - ERROR - Exception on /analysis/飲み会 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 242, in analysis
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+  File "/home/ujiie/narrative/demo.py", line 242, in <listcomp>
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+KeyError: '付き合い'
+2020-06-24 11:21:56,723 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 108, in login
+    userid = name2id[username]
+KeyError: ''
+2020-06-25 14:43:42,454 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 108, in login
+    userid = name2id[username]
+KeyError: '関西医大'
+2020-06-25 14:43:50,290 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 108, in login
+    userid = name2id[username]
+KeyError: '関西医大'
+2020-06-25 18:14:18,016 - demo - ERROR - Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 111, in admin
+    return render_template('admin.html', data=data)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ujiie/narrative/admin.html", line 32, in top-level template code
+    var drink_data = {{drink_data|tojson}};
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/json/__init__.py", line 376, in tojson_filter
+    return Markup(htmlsafe_dumps(obj, **kwargs))
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/json/__init__.py", line 290, in htmlsafe_dumps
+    dumps(obj, **kwargs)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'Undefined' is not JSON serializable
+2020-06-25 18:16:00,550 - demo - ERROR - Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 120, in admin
+    return render_template('admin.html', data=data, drink_data=drink_data)
+NameError: name 'data' is not defined
+2020-06-25 22:57:54,202 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 160, in login
+    userid = name2id[username]
+KeyError: 'aramaki'
+2020-06-25 22:58:18,087 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 160, in login
+    userid = name2id[username]
+KeyError: 'kmu'
+2020-06-26 07:35:01,333 - demo - ERROR - Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 133, in admin
+    if current_user.name != 'admin':
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'name'
+2020-06-26 23:44:54,698 - demo - ERROR - Exception on /drink [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 233, in drink
+    color, alc = calc_alc(request.form)
+  File "/home/ujiie/narrative/demo.py", line 219, in calc_alc
+    alc = [int(form.get(w)) * i for w, i in liqueur.items()]
+  File "/home/ujiie/narrative/demo.py", line 219, in <listcomp>
+    alc = [int(form.get(w)) * i for w, i in liqueur.items()]
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2020-06-26 23:45:06,860 - demo - ERROR - Exception on /drink [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 233, in drink
+    color, alc = calc_alc(request.form)
+  File "/home/ujiie/narrative/demo.py", line 219, in calc_alc
+    alc = [int(form.get(w)) * i for w, i in liqueur.items()]
+  File "/home/ujiie/narrative/demo.py", line 219, in <listcomp>
+    alc = [int(form.get(w)) * i for w, i in liqueur.items()]
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2020-07-01 22:33:06,967 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 160, in login
+    userid = name2id[username]
+KeyError: 'aramaki'
+2020-07-01 22:33:14,914 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 160, in login
+    userid = name2id[username]
+KeyError: 'aramaki'
+2020-07-01 22:33:46,190 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 160, in login
+    userid = name2id[username]
+KeyError: 'aramaki'
+2020-07-01 22:35:42,766 - demo - ERROR - Exception on /admin [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 133, in admin
+    if current_user.name != 'admin':
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'name'
+2020-07-01 22:35:44,484 - demo - ERROR - Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 133, in admin
+    if current_user.name != 'admin':
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'name'
+2020-07-02 19:04:57,160 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 160, in login
+    userid = name2id[username]
+KeyError: ''
+2020-07-02 19:05:33,886 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 160, in login
+    userid = name2id[username]
+KeyError: 'ikeda '
+2020-07-02 21:16:27,462 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 179, in login
+    userid = name2id[username]
+KeyError: 'IKEDA'
+2020-07-09 13:53:17,678 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 179, in login
+    userid = name2id[username]
+KeyError: 'ujiie'
+2020-07-11 23:08:34,447 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 179, in login
+    userid = name2id[username]
+KeyError: ''
+2020-07-11 23:10:16,473 - demo - ERROR - Exception on /analysis/今日は友人と会食。皆運転あるからノンアルコール飲んでたので自分も自然とノンアルコール飲んでた。 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 288, in analysis
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+  File "/home/ujiie/narrative/demo.py", line 288, in <listcomp>
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+KeyError: '運転'
+2020-07-11 23:10:30,246 - demo - ERROR - Exception on /analysis/今日は友人と会食。皆運転あるからノンアルコール飲んでたので自分も自然とノンアルコール飲んでた。 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 288, in analysis
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+  File "/home/ujiie/narrative/demo.py", line 288, in <listcomp>
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+KeyError: '運転'
+2020-07-13 15:46:25,313 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 179, in login
+    userid = name2id[username]
+KeyError: 'aramaki'
+2020-07-13 20:13:46,174 - demo - ERROR - Exception on /drink [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 251, in drink
+    dt_now = date[current_user.name]
+KeyError: 'sociocom'
+2020-07-13 20:13:57,721 - demo - ERROR - Exception on /drink [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 251, in drink
+    dt_now = date[current_user.name]
+KeyError: 'sociocom'
+2020-07-13 20:40:21,807 - demo - ERROR - Exception on /nondrink [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 275, in nondrink
+    save_drink_data(drink_information, current_user.name, dt_now,  {'start':dt_now, 'extendedProps':{'imageurl':color}}, DRINK_FILE_PATH)
+NameError: name 'color' is not defined
+2020-07-14 20:21:04,147 - demo - ERROR - Exception on /analysis/今日は友人と会食。皆運転あるからノンアルコール飲んでたので自分も自然とノンアルコール飲んでた。 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 324, in analysis
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+  File "/home/ujiie/narrative/demo.py", line 324, in <listcomp>
+    tags = [(id2color[hashtag2value[t]], t) for t in tags]
+KeyError: '運転'
+2020-07-20 15:04:52,614 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 195, in login
+    userid = name2id[username]
+KeyError: 'aramaki'
+2020-07-20 15:05:02,891 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 195, in login
+    userid = name2id[username]
+KeyError: 'aramaki'
+2020-07-21 00:13:01,203 - demo - ERROR - Exception on /analysis/運動したので [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 337, in analysis
+    add_user_information(tags, nes, text)
+  File "/home/ujiie/narrative/demo.py", line 324, in add_user_information
+    dt_now = date[current_user.name]
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'name'
+2020-07-27 22:03:37,013 - demo - ERROR - Exception on /drink [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 331, in drink
+    liq_num = {w:int(form.get(w)) for w in liqueur.keys()}
+  File "/home/ujiie/narrative/demo.py", line 331, in <dictcomp>
+    liq_num = {w:int(form.get(w)) for w in liqueur.keys()}
+NameError: name 'form' is not defined
+2020-07-28 15:30:32,242 - demo - ERROR - Exception on /admin [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 208, in admin
+    instance = user_instences[name].load_file()
+NameError: name 'user_instences' is not defined
+2020-08-18 12:16:25,540 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 230, in login
+    userid = name2id[username]
+KeyError: 'yoshiihi'
+2020-08-18 12:17:27,417 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 230, in login
+    userid = name2id[username]
+KeyError: ''
+2020-08-18 12:20:10,343 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 230, in login
+    userid = name2id[username]
+KeyError: ''
+2020-08-18 12:24:54,043 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 230, in login
+    userid = name2id[username]
+KeyError: ''
+2020-08-18 14:19:37,982 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 230, in login
+    userid = name2id[username]
+KeyError: ''
+2020-08-18 14:24:47,364 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 230, in login
+    userid = name2id[username]
+KeyError: ''
+2020-08-18 14:25:40,562 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 230, in login
+    userid = name2id[username]
+KeyError: ''
+2020-08-18 14:49:05,559 - demo - ERROR - Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 192, in admin
+    if current_user.name != 'admin':
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'name'
+2020-08-18 17:43:20,131 - demo - ERROR - Exception on /diary/2020-08-18 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 269, in diary
+    instance = user_instances[current_user.name].load_instance(target_date)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'name'
+2020-08-19 20:27:13,307 - demo - ERROR - Exception on /past_data/2020-07-28 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 260, in past_data
+    instance = user_instances[current_user.name].load_instance(target_date)
+KeyError: 'sociocom'
+2020-08-19 20:30:46,473 - demo - ERROR - Exception on /past_data/2020-07-28 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 276, in past_data
+    y, m, d = target_date.split('/')
+ValueError: not enough values to unpack (expected 3, got 1)
+2020-08-20 12:06:24,462 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 198, in login
+    userid = name2id[username]
+KeyError: 'lkajsdf'
+2020-08-20 13:30:07,163 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 202, in login
+    if (userid in users
+UnboundLocalError: local variable 'userid' referenced before assignment
+2020-08-20 13:30:12,622 - demo - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 202, in login
+    if (userid in users
+UnboundLocalError: local variable 'userid' referenced before assignment
+2020-08-20 14:18:23,218 - demo - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: top_page() missing 1 required positional argument: 'modal'
+2020-08-20 14:37:25,230 - demo - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 224, in top_page
+    date_list = user_instances[current_user.name].keys()
+AttributeError: 'UserInformation' object has no attribute 'keys'
+2020-08-20 14:37:45,362 - demo - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 224, in top_page
+    date_list = user_instances[current_user.name].keys()
+AttributeError: 'UserInformation' object has no attribute 'keys'
+2020-08-20 14:47:22,862 - demo - ERROR - Exception on /diary/2020-08-04 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 233, in diary
+    instance = user_instances[current_user.name].load_instance(target_date)
+KeyError: 'sociocom'
+2020-08-20 14:47:27,425 - demo - ERROR - Exception on /diary/2020-08-06 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 233, in diary
+    instance = user_instances[current_user.name].load_instance(target_date)
+KeyError: 'sociocom'
+2020-08-21 16:17:37,087 - demo - ERROR - Exception on /analysis/お腹がいたかった [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 341, in analysis
+    instance = tmp_buffer.get_instance(current_user.name)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'name'
+2020-08-23 01:23:28,643 - demo - ERROR - Exception on /past_data/2020-08-19 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 254, in past_data
+    instance = user_instances[current_user.name].load_instance(target_date)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'name'
+2020-08-27 21:26:05,079 - demo - ERROR - Exception on /diary/2020-08-27 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 233, in diary
+    instance = user_instances[current_user.name].load_instance(target_date)
+KeyError: 'sociocom'
+2020-08-28 01:50:05,944 - demo - ERROR - Exception on /analysis/メッセージなし [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 340, in analysis
+    instance = tmp_buffer.get_instance(current_user.name)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'name'
+2020-09-02 23:22:13,080 - demo - ERROR - Exception on /diary/2020-08-18 [GET]
+Traceback (most recent call last):
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ujiie/narrative/demo.py", line 233, in diary
+    instance = user_instances[current_user.name].load_instance(target_date)
+  File "/home/ujiie/.pyenv/versions/3.6.4/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'name'

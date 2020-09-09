@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>一行日記</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script>
+        function jump_top(){
+        location.href = 'http://aoi.naist.jp/drink/';
+        }
+        function jump_logout(){
+        location.href = 'http://aoi.naist.jp/drink/logout';
+        }
+        function jump_choice(){
+        location.href = 'http://aoi.naist.jp/drink/admin';
+        }
+    </script>
+
+  </head>
+  <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <p class="navbar-brand">一行日記</p>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="javascript: jump_choice();" class="nav-link">患者選択画面に戻る</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript: jump_top();" class="nav-link">トップページに戻る</a>
+                </li>
+                <li class="nav-item">
+                    <a href='javascript: jump_logout();' class="nav-link">ログアウト</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row mt-3">
+                <div class="col-md-3 text-center">
+                    <button type="button" class="btn btn-info btn-lg" onclick="prevWeek();">前の週へ</button>
+                </div>
+                <div class="col-md-6 text-center">
+                    <h1>{{username}}</h1>
+                </div>
+                <div class="col-md-3 text-center">
+                    <button type="button" class="btn btn-info btn-lg" onclick="postWeek();">次の週へ</button>
+                </div>
+            </div>
+            <hr>
+            <canvas id="myChart" class="mt-3"></canvas>
+            <hr>
+            <div id="mytable" class="mt-3"></div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+        <script src="http://aoi.naist.jp/~ujiie/mytable.js"></script>
+        <script src="http://aoi.naist.jp/~ujiie/mychart.js"></script>
+        <script>
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+            var data = {{data|tojson}};
+            var drink_data = {{drink_data|tojson}};
+            drawTable(data, year, month, day);
+            drawChart(drink_data, year, month, day);
+
+            function prevWeek() {
+                date.setDate(date.getDate() - 7);
+                drawTable(data, date.getFullYear(), date.getMonth()+1, date.getDate());
+                drawChart(drink_data, date.getFullYear(), date.getMonth()+1, date.getDate());
+            };
+
+            function postWeek() {
+                date.setDate(date.getDate() + 7);
+                drawTable(data, date.getFullYear(), date.getMonth()+1, date.getDate());
+                drawChart(drink_data, date.getFullYear(), date.getMonth()+1, date.getDate());
+            };
+        </script>
+    </body>
+</html>

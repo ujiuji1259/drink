@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>禁酒アプリ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script src="http://aoi.naist.jp/~ujiie/spinner.js"></script>
+
+    <script>
+        function jump_top(){
+        location.href = 'http://aoi.naist.jp/drink/';
+        }
+        function jump_logout(){
+        location.href = 'http://aoi.naist.jp/drink/logout';
+        }
+    </script>
+
+  </head>
+  <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <p class="navbar-brand">禁酒アプリ</p>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="javascript: jump_top();" class="nav-link">トップページに戻る</a>
+                </li>
+                <li class="nav-item">
+                    <a href='javascript: jump_logout();' class="nav-link">ログアウト</a>
+                </li>
+            </ul>
+        </nav>
+
+    <div class="container-fluid">
+        <h1 class="text-center mt-3 bg-light">今日の日記</h1>
+        <hr>
+        <div class='row'>
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <h3>なにを飲みましたか</h3>
+                            <hr>
+                            <div class="form-group row mt-2 ml-2">
+                              <label class="col-4 col-form-label">ビール（350ml）</label>
+                              <div class="col-8">
+                                  <div class-"spinner_area">
+                                      <div class="row">
+                                          <input type="button" value="＋" class="btnspinner col-2 btn btn-primary" data-cal="1" data-target=".counter1">
+                                          <input type="number" value="0" class="counter1 col-4 text-center" data-max="20" data-min="0" name="beer">
+                                          <input type="button" value="ー" class="btnspinner col-2 btn btn-primary" data-cal="-1" data-target=".counter1">
+                                          <div class="col-4"></div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                            <div class="form-group row ml-2">
+                              <label for="fromControlRange" class="col-4 col-form-label">焼酎（水割り）</label>
+                              <div class="col-8">
+                                  <div class-"spinner_area">
+                                      <div class="row">
+                                          <input type="button" value="＋" class="btnspinner col-2 btn btn-primary" data-cal="1" data-target=".counter2">
+                                          <input type="number" value="0" class="counter2 col-4 text-center" data-max="20" data-min="0" name="syo">
+                                          <input type="button" value="ー" class="btnspinner col-2 btn btn-primary" data-cal="-1" data-target=".counter2">
+                                          <div class="col-4"></div>
+                                        </div>
+                                  </div>
+                            </div>
+                        </div>
+
+                            <div class="form-group row ml-2">
+                              <label for="fromControlRange" class="col-4 col-form-label">ワイン（グラス）</label>
+                              <div class="col-8">
+                                  <div class-"spinner_area">
+                                      <div class="row">
+                                          <input type="button" value="＋" class="btnspinner col-2 btn btn-primary" data-cal="1" data-target=".counter3">
+                                          <input type="number" value="0" class="counter3 col-4 text-center" data-max="20" data-min="0" name="wine">
+                                          <input type="button" value="ー" class="btnspinner col-2 btn btn-primary" data-cal="-1" data-target=".counter3">
+                                          <div class="col-4"></div>
+                                        </div>
+                                  </div>
+                            </div>
+                        </div>
+
+
+                            <div class="form-group row ml-2">
+                                <label for="fromControlRange" class="col-4 col-form-label">ハイボール（350ml）</label>
+                              <div class="col-8">
+                                  <div class-"spinner_area">
+                                      <div class="row">
+                                          <input type="button" value="＋" class="btnspinner col-2 btn btn-primary" data-cal="1" data-target=".counter4">
+                                          <input type="number" value="0" class="counter4 col-4 text-center" data-max="20" data-min="0" name="highball">
+                                          <input type="button" value="ー" class="btnspinner col-2 btn btn-primary" data-cal="-1" data-target=".counter4">
+                                          <div class="col-4"></div>
+                                        </div>
+                                  </div>
+                            </div>
+                        </div>
+
+                            <div class="form-group row ml-2">
+                                <label for="fromControlRange" class="col-4 col-form-label">日本酒（1合）</label>
+                              <div class="col-8">
+                                  <div class-"spinner_area">
+                                      <div class="row">
+                                          <input type="button" value="＋" class="btnspinner col-2 btn btn-primary" data-cal="1" data-target=".counter5">
+                                          <input type="number" value="0" class="counter5 col-4 text-center" data-max="20" data-min="0" name="jap">
+                                          <input type="button" value="ー" class="btnspinner col-2 btn btn-primary" data-cal="-1" data-target=".counter5">
+                                          <div class="col-4"></div>
+                                        </div>
+                                  </div>
+                            </div>
+                        </div>
+
+                            <div class="form-group row ml-2">
+                                <label for="fromControlRange" class="col-4 col-form-label">その他</label>
+                              <div class="col-8">
+                                  <div class-"spinner_area">
+                                      <div class="row">
+                                          <input type="button" value="＋" class="btnspinner col-2 btn btn-primary" data-cal="1" data-target=".counter6">
+                                          <input type="number" value="0" class="counter6 col-4 text-center" data-max="20" data-min="0" name="other">
+                                          <input type="button" value="ー" class="btnspinner col-2 btn btn-primary" data-cal="-1" data-target=".counter6">
+                                          <div class="col-4"></div>
+                                        </div>
+                                  </div>
+                            </div>
+                        </div>
+
+
+
+                        <!--
+                            <div class="form-group" style="margin: 20px 0px;">
+                              <label for="fromControlRange" class="question-label col-xs-3">その他</label>
+                              <div class="col-xs-8">
+                                  <input type="range" value="0" min="0" max="10" step="1" class="form-control-range" id="formControlRange" oninput="document.getElementById('output6').value=this.value" name='other'>
+                                </div>
+                              <output id="output6" class="question-label col-xs-1">0</output>
+                            <div>
+                            -->
+
+                          <div class="form-group mt-2">
+                              <label><h5>その他を選んだ方は具体的に入力してください</h5></label>
+                            <input type="textarea" class="form-control" name="other_re" placeholder="">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <div class-"form-group mt-0">
+                                <label><h3>どうして飲みましたか</h3></label>
+                                <hr>
+                                <textarea class="form-control" name="drink" placeholder="" cols='5'></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <button class="btn btn-primary btn-lg btn-block" formmethod="POST">送信</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

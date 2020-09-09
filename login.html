@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link href="http://aoi.naist.jp/~ujiie/login_2.css" rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    </head>
+    <!------ Include the above in your HEAD tag ---------->
+
+
+    <body>
+        <div class="container">
+            <div class="login">
+                <div class="login-triangle"></div>
+                    <h2 class="login-header">一行日記</h2>
+                    <form class="login-container" method="POST">
+                        <p><input type="user name" placeholder="User name" name="username"></p>
+                        <p><input type="password" placeholder="Password" name="password"></p>
+                        <p><input type="submit" value="Log in"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal in" tabindex="-1" role="dialog" id="checkModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">確認</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>ユーザー名かパスワードが間違っています</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let modal = {{modal|tojson}};
+            $(window).on('load', function(){
+                if (modal == "true") $("#checkModal").modal('show');
+            });
+        </script>
+    </body>
+</html>
