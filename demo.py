@@ -16,10 +16,10 @@ from data_structure import UserInformation, Buffer
 tmp_buffer = Buffer()
 user_instances = {}
 
-USER_FILE_PATH = '/home/ujiie/narrative/users/'
-DRINK_FILE_PATH = '/home/ujiie/narrative/drink_num/'
-DRINK_CHART_PATH = '/home/ujiie/narrative/drink_chart/'
-USER_PICKLE_FILE_PATH = '/home/ujiie/narrative/users_pkl/'
+USER_FILE_PATH = './users/'
+DRINK_FILE_PATH = './drink_num/'
+DRINK_CHART_PATH = './drink_chart/'
+USER_PICKLE_FILE_PATH = './users_pkl/'
 liqueur = {'beer':14, 'syo':22, 'wine':12, 'highball':22, 'jap':22, 'other':15}
 liqueur_to_word = {'beer':'ビール（350ml）', 'syo':'焼酎（水割り 180ml）', 'wine':'ワイン（グラス 120ml）', 'highball':'ハイボール（350ml）', 'other':'その他', 'jap':'日本酒（1合）'}
 date = {}
@@ -63,10 +63,11 @@ class User(UserMixin):
         return self.id
 
 
-LOGFILE = "/home/ujiie/narrative/drink.log"
+LOGFILE = "./drink.log"
 
-app = Flask(__name__, template_folder="/home/ujiie/narrative")
+app = Flask(__name__, template_folder="./")
 app.logger.setLevel(logging.DEBUG)
+app.config.from_pyfile("conf/app.conf")
 app.config['SECRET_KEY'] = "secret"
 fh = logging.FileHandler(LOGFILE)
 fh.setLevel(logging.DEBUG)
@@ -159,7 +160,7 @@ def load_user(user_id):
 @app.route('/admin', methods=["POST", "GET"])
 def admin():
     if current_user.name != 'admin':
-        return render_template('index.html', name=current_user.name)
+        return render_template('index.html', name=current_user.name, prefix=prefix)
 
     if request.method == "GET":
         users = list(name2id.keys())
@@ -182,7 +183,7 @@ def admin():
         instance = user_instances[name]
         data = instance.get_user_format()
         drink_data = instance.get_chart_format()
-        return render_template('admin.html', data=data, drink_data=drink_data, username=name)
+        return render_template('admin.html', data=data, drink_data=drink_data, username=name, prefix=prefix)
 
 
 @app.route('/logout')
@@ -223,7 +224,7 @@ def top_page():
 
         date_list = list(user_instances[current_user.name].input_dict.keys())
 
-        return render_template('index.html', name=current_user.name, date_list=date_list)
+        return render_template('index.html', name=current_user.name, date_list=date_list, prefix=prefix)
     else:
         return redirect(url_for('login', modal="false"))
 
@@ -355,5 +356,8 @@ def save():
     return redirect(url_for('top_page'))
 
 if __name__ == "__main__":
+    prefix = ''
+    if app.config['ENV'] == 'production':
+        prefix = '/drink'
     app.run(port="8006", host="0.0.0.0", debug=True)
 
