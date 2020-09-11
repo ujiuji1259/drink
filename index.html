@@ -23,9 +23,9 @@
         <script src="./static/fullcalendar-scheduler-4.4.2/packages/daygrid/main.js"></script>
         <script src="./static/fullcalendar-scheduler-4.4.2/packages/timegrid/main.js"></script>
         <script src="./static/fullcalendar-scheduler-4.4.2/packages/core/locales-all.js"></script>
+        <script src="./static/base.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./static/drink_common.css">
-
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                     var calendarEl = document.getElementById('calendar');
@@ -88,12 +88,12 @@
                 if (date_list.includes(current_date)) $("#checkModal").modal('show');
                 else location.href = local + 'diary/' + current_date;
             }
-            function jump_logout(){
-                location.href = local + 'logout';
-            }
-            function jump_admin(){
-                location.href = local + 'admin';
-            }
+            // function jump_logout(){
+            //     location.href = local + 'logout';
+            // }
+            // function jump_admin(){
+            //     location.href = local + 'admin';
+            // }
         </script>
     </head>
 
@@ -107,11 +107,11 @@
             <ul class="navbar-nav">
                 {% if current_user.name == "admin" %}
                 <li class="nav-item">
-                    <a href='javascript: jump_admin();' class="nav-link">管理画面</a>
+                    <a href="#" class="nav-link jump_admin">管理画面</a>
                 </li>
                 {% endif %}
                 <li class="nav-item">
-                    <a href='javascript: jump_logout();' class="nav-link">ログアウト</a>
+                    <a href="#" class="nav-link jump_logout">ログアウト</a>
                 </li>
             </ul>
         </nav>
