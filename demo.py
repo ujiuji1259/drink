@@ -160,7 +160,7 @@ def load_user(user_id):
 @app.route('/admin', methods=["POST", "GET"])
 def admin():
     if current_user.name != 'admin':
-        return render_template('index.html', name=current_user.name, prefix=prefix)
+        return render_template('index.html', name=current_user.name)
 
     if request.method == "GET":
         users = list(name2id.keys())
@@ -183,7 +183,7 @@ def admin():
         instance = user_instances[name]
         data = instance.get_user_format()
         drink_data = instance.get_chart_format()
-        return render_template('admin.html', data=data, drink_data=drink_data, username=name, prefix=prefix)
+        return render_template('admin.html', data=data, drink_data=drink_data, username=name)
 
 
 @app.route('/logout')
@@ -209,7 +209,7 @@ def login():
 
         modal = "true"
     
-    return render_template('login.html', modal=modal, prefix=prefix)
+    return render_template('login.html', modal=modal)
 
 
 @app.route('/')
@@ -224,7 +224,7 @@ def top_page():
 
         date_list = list(user_instances[current_user.name].input_dict.keys())
 
-        return render_template('index.html', name=current_user.name, date_list=date_list, prefix=prefix)
+        return render_template('index.html', name=current_user.name, date_list=date_list)
     else:
         return redirect(url_for('login', modal="false"))
 
@@ -356,8 +356,8 @@ def save():
     return redirect(url_for('top_page'))
 
 if __name__ == "__main__":
-    prefix = ''
-    if app.config['ENV'] == 'production':
-        prefix = '/drink'
-    app.run(port="8006", host="0.0.0.0", debug=True)
+    # prefix = ''
+    # if app.config['ENV'] == 'production':
+    #     prefix = '/drink'
+    app.run(port="8093", host="0.0.0.0", debug=True)
 
