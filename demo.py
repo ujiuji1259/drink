@@ -209,7 +209,7 @@ def login():
 
         modal = "true"
     
-    return render_template('login.html', modal=modal)
+    return render_template('login.html', modal=modal, prefix=prefix)
 
 
 @app.route('/')
