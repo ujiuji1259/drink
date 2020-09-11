@@ -67,7 +67,6 @@ LOGFILE = "./drink.log"
 
 app = Flask(__name__, template_folder="./")
 app.logger.setLevel(logging.DEBUG)
-app.config.from_pyfile("conf/app.conf")
 app.config['SECRET_KEY'] = "secret"
 fh = logging.FileHandler(LOGFILE)
 fh.setLevel(logging.DEBUG)
@@ -356,8 +355,5 @@ def save():
     return redirect(url_for('top_page'))
 
 if __name__ == "__main__":
-    # prefix = ''
-    # if app.config['ENV'] == 'production':
-    #     prefix = '/drink'
     app.run(port="8093", host="0.0.0.0", debug=True)
 
