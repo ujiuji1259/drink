@@ -112,9 +112,9 @@ function get_date() {
 var post_result = {};
 var chat = null;
 $(function () {
-    $('.move-arrow').on('click', function () {
-        var selected_date = get_date();
-        var date = selected_date[3];
+    var selected_date = get_date();
+    var date = selected_date[3];
+    $('.move-arrow').on('click', function (event) {
         var action = $(this).attr('data-action');
         if (action === 'move-prev') {
             date.setDate(date.getDate() - 7);
