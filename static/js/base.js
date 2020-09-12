@@ -1,5 +1,5 @@
 var base_url = ''
-if (window.location.href.indexOf('aoi') >= 0) {
+if (window.location.href.indexOf('.jp') >= 0 || window.location.href.indexOf('.com') >= 0) {
     base_url = '/drinks'
 }
 
@@ -13,6 +13,6 @@ $(function () {
     });
 
     $('.jump_admin').on('click', function () {
-        location.href = base_url + "/admin";
+        location.href = base_url + "/admin2";
     })
 })
