@@ -109,28 +109,11 @@ function get_date() {
     return [year, month, day, date]
 }
 
-var post_result = {};
-var chat = null;
-$(function () {
-    var selected_date = get_date();
-    var date = selected_date[3];
-    $('.move-arrow').on('click', function (event) {
-        var action = $(this).attr('data-action');
-        if (action === 'move-prev') {
-            date.setDate(date.getDate() - 7);
-        } else if (action === 'move-next') {
-            date.setDate(date.getDate() + 7);
-        }
-        init_chart(post_result['drink_data'], date.getFullYear(), date.getMonth()+1, date.getDate());
-        init_table(post_result['data'], date.getFullYear(), date.getMonth()+1, date.getDate());
-    });
-
-
-    $('.selectpicker').on('change', function () {
-        var formData = new FormData();
-        formData.append('username', $(this).val());
-        var selected_name = $(this).val();
-        $.ajax({
+function get_admin_data() {
+    var formData = new FormData();
+    var selected_name = $('.selectpicker').val();
+    formData.append('username', selected_name);
+    $.ajax({
             url: base_url + '/get_admin_data',
             data: formData,
             type: "POST",
@@ -145,8 +128,29 @@ $(function () {
                 post_result = result;
                 init_chart(result['drink_data'], selected_date[0], selected_date[1], selected_date[2])
                 init_table(result['data'], selected_date[0], selected_date[1], selected_date[2])
-                // console.log(result['data']);
             }
         });
+}
+
+var post_result = {};
+var chat = null;
+$(function () {
+    get_admin_data();
+
+    var selected_date = get_date();
+    var date = selected_date[3];
+    $('.move-arrow').on('click', function (event) {
+        var action = $(this).attr('data-action');
+        if (action === 'move-prev') {
+            date.setDate(date.getDate() - 7);
+        } else if (action === 'move-next') {
+            date.setDate(date.getDate() + 7);
+        }
+        init_chart(post_result['drink_data'], date.getFullYear(), date.getMonth()+1, date.getDate());
+        init_table(post_result['data'], date.getFullYear(), date.getMonth()+1, date.getDate());
+    });
+
+    $('.selectpicker').on('change', function () {
+        get_admin_data();
     })
 })
