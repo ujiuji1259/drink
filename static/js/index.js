@@ -184,6 +184,7 @@ $(function () {
     });
 
     $('#submit-button').on('click', function () {
+        $('#progressbar').css('width', '100%');
         if ($('#drink_text').val().length <= 0 ) {
             bootbox.alert({
                     title: "確認",
