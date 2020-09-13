@@ -16,3 +16,7 @@ $(function () {
         location.href = base_url + "/admin2";
     })
 })
+
+function get_weekday(index) {
+    return '日月火水木金土'.charAt(index);
+}

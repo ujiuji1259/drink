@@ -73,7 +73,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createModalLabel">今日はお酒を飲みましたか</h5>
+                <h5 class="modal-title" id="createModalLabel"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -82,6 +82,7 @@
                 <form>
                     <div class="form-group">
                         <div id="first-panel">
+                            <span class="question"><strong>今日はお酒を飲みましたか</strong></span>
                             <div class="col-auto">
                                 <label class="col-form-label"><input type="radio" class="isdrink" name="isdrink"
                                                                      value="yes" id="drink">飲んだ</label>
@@ -93,6 +94,7 @@
                             </div>
                         </div>
                         <div id="second-panel" style="display: none">
+                            <span class="question"><strong>なにを飲みましたか</strong></span>
                             <div class="form-group row mt-2 ml-2">
                                 <label class="col-4 col-form-label">ビール（350ml）</label>
                                 <div class="col-8">
@@ -188,20 +190,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mt-2">
+                            <div class="form-group mt-2" id="other_re_text" style="display: none">
                                 <label>その他を選んだ方は具体的に入力してください</label>
-                                <input type="textarea" disabled class="form-control" value="" name="other_re" placeholder="">
+                                <input type="textarea" class="form-control" value="" name="other_re" placeholder="">
                             </div>
                         </div>
 
                         <div id="third-panel" style="display: none">
-                            <div class="card mt-3">
-                                <div class="card-body">
+                            <span class="question"><strong>一行日記を書いてください</strong></span>
+<!--                            <div class="card mt-3">-->
+<!--                                <div class="card-body">-->
                                     <div class="form-group mt-0">
-                                        <textarea class="form-control" name="drink" placeholder="" cols='5' value="" id='drink_text'></textarea>
+                                        <textarea class="form-control" name="drink" placeholder="" cols='5' value="" id='drink_text' style="margin-top: 10px;"></textarea>
                                     </div>
-                                </div>
-                            </div>
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
 
                     </div>

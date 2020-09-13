@@ -100,11 +100,11 @@ $(function () {
     $('input[name="other"]').on('change', function () {
         var val = $(this).val();
         if (val.length > 0 && parseInt(val) > 0) {
-            $('input[name="other_re"]').attr('disabled', false);
+            $('#other_re_text').slideDown();
             $('#progressbar').css('width', '66%');
         }
         if (val.length > 0 && parseInt(val) === 0) {
-            $('input[name="other_re"]').attr('disabled', true);
+            $('#other_re_text').slideUp();
             $('#progressbar').css('width', '33%');
         }
     });
@@ -149,7 +149,6 @@ $(function () {
         var dairy_value = {};
         if ('drink' in result) {
             if ($('#first-panel').is(':visible') && !$('#second-panel').is(':visible') && !$('#third-panel').is(':visible')) {
-                $('#createModalLabel').text('なにを飲みましたか');
                 $.get(base_url + "/get_dairy_value/" + $('#clicked-date').val(), function (data, status) {
                     dairy_value = data;
                     for (var key in dairy_value) {
@@ -170,7 +169,6 @@ $(function () {
                 result['jap'] = $('input[name="jap"]').val();
                 result['other'] = $('input[name="other"]').val();
                 result['other_re'] = $('input[name="other_re"]').val();
-                $('#createModalLabel').text('一行日記を書いてください');
                 $('#second-panel').fadeOut();
                 $('#third-panel').fadeIn();
                 $('#next-button').hide();
@@ -178,7 +176,6 @@ $(function () {
             }
         } else if ('nodrink' in result) {
             if ($('#first-panel').is(':visible') && !$('#third-panel').is(':visible')) {
-                $('#createModalLabel').text('一行日記を書いてください');
                 $('#first-panel').fadeOut();
                 $('#third-panel').fadeIn();
                 $('#next-button').hide();
@@ -252,7 +249,10 @@ $(function () {
                 });
                 return
             }
-            $('#clicked-date').val(moment(e.start.getTime()).format('YYYY-MM-DD'));
+            var clicked_date = e.start.getTime();
+            var weekday = e.start.toDate().getDay();
+            $('#clicked-date').val(moment(clicked_date).format('YYYY-MM-DD'));
+            $('#createModalLabel').text(moment(clicked_date).format('YYYY年MM月DD日') + "（" + get_weekday(weekday) + "）");
             $('#createModal').modal('show');
         },
         'beforeUpdateSchedule': function (e) {
