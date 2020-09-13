@@ -57,12 +57,11 @@ function init_modal() {
     $('#next-button').show();
     $('#next-button').attr('disabled', true);
     $('#submit-button').hide();
-    $('.slider').val("");
-    $('.slider').slider('refresh', { useCurrentValue: false });
     $('#progressbar').css('width', '2%');
     $('input[name="isdrink"]').prop('checked', false);
     $('#createModalLabel').text('今日はお酒を飲みましたか');
     $('#drink_text').val("");
+    $('.drink-slider').slider('refresh', {useCurrentValue: false});
 }
 
 $(function () {
@@ -73,13 +72,13 @@ $(function () {
         onClickNavi(event);
     });
 
-    $('.slider').slider({
+    $('.drink-slider').slider({
         formatter: function (value) {
             return value;
         }
     });
 
-    $('.slider').on('change', function () {
+    $('.drink-slider').on('change', function () {
         var val = $(this).val();
         if (val.length > 0 && parseInt(val) > 0) {
             $('#progressbar').css('width', '66%');
@@ -207,17 +206,18 @@ $(function () {
             result['nodrink'] = $('#drink_text').val();
             post_url = base_url + '/nodrink';
         }
-        $.ajax({
-            type: "post",
-            url: post_url,
-            data: JSON.stringify(result),
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function () {
-                console.log(111);
-            }
-        });
+        // $.ajax({
+        //     type: "post",
+        //     url: post_url,
+        //     data: JSON.stringify(result),
+        //     contentType: "application/json; charset=utf-8",
+        //     dataType: "json",
+        //     success: function () {
+        //         console.log(111);
+        //     }
+        // });
         $('#createModal').modal('hide');
+        alert(JSON.stringify(result));
     });
 
     cal.on({
