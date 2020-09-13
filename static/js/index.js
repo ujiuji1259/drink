@@ -184,7 +184,6 @@ $(function () {
     });
 
     $('#submit-button').on('click', function () {
-        $('#progressbar').css('width', '100%');
         if ($('#drink_text').val().length <= 0 ) {
             bootbox.alert({
                     title: "確認",
@@ -207,6 +206,7 @@ $(function () {
             result['nodrink'] = $('#drink_text').val();
             post_url = base_url + '/nodrink';
         }
+        $('#progressbar').css('width', '100%');
         // $.ajax({
         //     type: "post",
         //     url: post_url,
