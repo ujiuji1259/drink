@@ -2,6 +2,11 @@
     padding: 16px;
 }
 
+.title {
+    font-size: 28px;
+    font-family: 'YuMincho';
+}
+
 .btn-default {
     color: #333;
     background-color: #fff;

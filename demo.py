@@ -69,6 +69,7 @@ LOGFILE = "./drink.log"
 
 app = Flask(__name__, template_folder="./")
 app.config.from_pyfile("conf/app.conf")
+app.logger.setLevel(logging.DEBUG)
 app.config['SECRET_KEY'] = "secret"
 fh = logging.FileHandler(LOGFILE)
 fh.setLevel(logging.DEBUG)
