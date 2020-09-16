@@ -15,17 +15,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" crossorigin="anonymous"></script>
 
-        <link href="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/core/main.css" rel="stylesheet">
-        <link href="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/daygrid/main.css" rel="stylesheet">
-        <link href="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/timegrid/main.css" rel="stylesheet">
-        <script src="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/core/main.js"></script>
-        <script src="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/interaction/main.js"></script>
-        <script src="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/daygrid/main.js"></script>
-        <script src="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/timegrid/main.js"></script>
-        <script src="http://aoi.naist.jp/~ujiie/fullcalendar-scheduler-4.4.2/packages/core/locales-all.js"></script>
+        <link href="./static/fullcalendar-scheduler-4.4.2/packages/core/main.css" rel="stylesheet">
+        <link href="./static/fullcalendar-scheduler-4.4.2/packages/daygrid/main.css" rel="stylesheet">
+        <link href="./static/fullcalendar-scheduler-4.4.2/packages/timegrid/main.css" rel="stylesheet">
+        <script src="./static/fullcalendar-scheduler-4.4.2/packages/core/main.js"></script>
+        <script src="./static/fullcalendar-scheduler-4.4.2/packages/interaction/main.js"></script>
+        <script src="./static/fullcalendar-scheduler-4.4.2/packages/daygrid/main.js"></script>
+        <script src="./static/fullcalendar-scheduler-4.4.2/packages/timegrid/main.js"></script>
+        <script src="./static/fullcalendar-scheduler-4.4.2/packages/core/locales-all.js"></script>
+        <script src="./static/js/base.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="http://aoi.naist.jp/~ujiie/drink_common.css">
-
+        <link rel="stylesheet" href="./static/drink_common.css">
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                     var calendarEl = document.getElementById('calendar');
@@ -88,28 +88,24 @@
                 if (date_list.includes(current_date)) $("#checkModal").modal('show');
                 else location.href = local + 'diary/' + current_date;
             }
-            function jump_logout(){
-                location.href = local + 'logout';
-            }
-            function jump_admin(){
-                location.href = local + 'admin';
-            }
         </script>
     </head>
 
     <body>
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="/"><img src="http://aoi.naist.jp/~ujiie/naist_logo.jpg" alt="" style="max-height:50px;"></a>
-            <a class="navbar-brand" href="/"><img src="http://aoi.naist.jp/~ujiie/unnamed.png" alt="" style="max-height:50px;"></a>
-            <p class="navbar-brand">一行日記</p>
+            <a class="navbar-brand" href="/">
+                <img src="./static/naist_logo_white.png" alt="" style="max-height:50px;">
+                <img src="./static/unnamed_white.png" alt="" style="max-height:50px;">
+            </a>
+            <span class="navbar-brand" style="flex-basis: 260px;"><strong class="title">一行日記</strong></span>
             <ul class="navbar-nav">
                 {% if current_user.name == "admin" %}
                 <li class="nav-item">
-                    <a href='javascript: jump_admin();' class="nav-link">管理画面</a>
+                    <a href="#" class="nav-link jump_admin">管理画面</a>
                 </li>
                 {% endif %}
                 <li class="nav-item">
-                    <a href='javascript: jump_logout();' class="nav-link">ログアウト</a>
+                    <a href="#" class="nav-link jump_logout">ログアウト</a>
                 </li>
             </ul>
         </nav>

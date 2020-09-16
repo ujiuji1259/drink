@@ -1,0 +1,99 @@
+#menu {
+    padding: 16px;
+}
+
+.title {
+    font-size: 28px;
+    font-family: 'YuMincho';
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.move-today {
+    padding: 0 16px;
+    line-height: 30px;
+}
+
+.calendar-icon {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.render-range {
+    padding-left: 12px;
+    font-size: 19px;
+    vertical-align: middle;
+}
+
+.slider {
+    /*margin-top: 8px;*/
+}
+
+.slider .slider-handle {
+	background: red;
+}
+
+.slider .slider-selection {
+	background: #FF8282;
+}
+
+.tui-full-calendar-near-month-day:hover {
+    cursor: pointer;
+}
+
+.clicked-cell {
+    border: 1px solid #515ce6;
+    background-color: rgba(81, 92, 230, 0.05);
+}
+
+.col-8 {
+    padding-top: calc(.375rem + 1px);
+    padding-bottom: calc(.375rem + 1px);
+}
+
+.isdrink {
+    margin-right: 5px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#table thead th {
+    text-align: center;
+    background-color: #343a40;
+    color: whitesmoke;
+}
+
+.move-arrow {
+    font-size: 20px;
+    margin: 0 13%;
+}
+
+.week_text {
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.move-arrow:hover{
+    cursor: pointer;
+}
+
+#admin_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
