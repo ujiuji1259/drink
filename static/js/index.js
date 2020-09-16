@@ -1,14 +1,22 @@
 var result = {};
-var cal = new tui.Calendar('#calendar', {
-    defaultView: 'month',
-    useCreationPopup: false,
-    useDetailPopup: false,
-    month: {
-        daynames: ['日', '月', '火', '水', '木', '金', '土'],
-        startDayOfWeek: 0,
-        narrowWeekend: false
-    }
-});
+
+function init_calendar() {
+    var _cal = new tui.Calendar('#calendar', {
+        defaultView: 'month',
+        useCreationPopup: false,
+        useDetailPopup: false,
+        month: {
+            daynames: ['日', '月', '火', '水', '木', '金', '土'],
+            startDayOfWeek: 0,
+            narrowWeekend: false
+        }
+    });
+    return _cal;
+}
+
+var current_height = document.documentElement.clientHeight;
+$('#calendar').css({'height': current_height * 0.8});
+var cal = init_calendar();
 
 function getDataAction(target) {
     return target.dataset ? target.dataset.action : target.getAttribute('data-action');
@@ -251,9 +259,9 @@ $(function () {
                 return
             }
             var clicked_date = e.start.getTime();
-            var weekday = e.start.toDate().getDay();
+            var day = e.start.toDate().getDay();
             $('#clicked-date').val(moment(clicked_date).format('YYYY-MM-DD'));
-            $('#createModalLabel').text(moment(clicked_date).format('YYYY年MM月DD日') + "（" + get_weekday(weekday) + "）");
+            $('#createModalLabel').text(moment(clicked_date).format('YYYY年MM月DD日') + "（" + get_day(day) + "）");
             $('#createModal').modal('show');
         },
         'beforeUpdateSchedule': function (e) {
@@ -267,4 +275,5 @@ $(function () {
             cal.deleteSchedule(e.schedule.id, e.schedule.calendarId);
         }
     });
+
 });

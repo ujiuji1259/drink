@@ -17,6 +17,6 @@ $(function () {
     })
 })
 
-function get_weekday(index) {
+function get_day(index) {
     return '日月火水木金土'.charAt(index);
 }
