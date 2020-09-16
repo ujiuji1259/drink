@@ -1,7 +1,7 @@
 var result = {};
 
 function init_calendar() {
-    var _cal = new tui.Calendar('#calendar', {
+    return new tui.Calendar('#calendar', {
         defaultView: 'month',
         useCreationPopup: false,
         useDetailPopup: false,
@@ -11,7 +11,6 @@ function init_calendar() {
             narrowWeekend: false
         }
     });
-    return _cal;
 }
 
 var current_height = document.documentElement.clientHeight;
@@ -67,7 +66,6 @@ function init_modal() {
     $('#submit-button').hide();
     $('#progressbar').css('width', '2%');
     $('input[name="isdrink"]').prop('checked', false);
-    $('#createModalLabel').text('今日はお酒を飲みましたか');
     $('#drink_text').val("");
     $('.drink-slider').slider('refresh', {useCurrentValue: false});
 }
