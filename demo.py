@@ -12,8 +12,6 @@ import json
 from datetime import datetime as dt
 from find_similar_episode import Episodes, space_split
 from data_structure import UserInformation, Buffer
-import pymongo
-from sshtunnel import SSHTunnelForwarder
 
 tmp_buffer = Buffer()
 user_instances = {}
@@ -394,43 +392,6 @@ def get_admin_data():
     return make_response(response)
 
 
-@app.route('/save_record', methods=['POST'])
-def save_post():
-    collection = db['collection']
-    json_request = str(request.get_data(), "utf-8")
-    data = json.loads(json_request)
-
-
-
-def get_mongodb_client():
-    global client, server
-    mongo_host = app.config['MONGO_SERVER']
-    mongo_user = app.config['MONGO_USER']
-    mongo_pass = app.config['MONGO_PASS']
-    server = SSHTunnelForwarder(
-        mongo_host,
-        ssh_username=mongo_user,
-        ssh_password=mongo_pass,
-        remote_bind_address=('127.0.0.1', 27017)
-    )
-    server.start()
-    client = pymongo.MongoClient("127.0.0.1", server.local_bind_port)
-    return client, server
-
-
 if __name__ == "__main__":
-    server, client, db = None, None, None
-    env = app.config['ENV']
-    if env == 'development':
-        client = pymongo.MongoClient()
-    elif env == 'production':
-        client, server = get_mongodb_client()
-    try:
-        db = client['drink']
-        app.run(port="8093", host="0.0.0.0", debug=True)
-    finally:
-        if server:
-            server.close()
-        if client:
-            client.close()
+    app.run(port="8093", host="0.0.0.0", debug=True)
 
