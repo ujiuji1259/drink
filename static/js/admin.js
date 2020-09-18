@@ -32,6 +32,9 @@ function init_chart(drink_data, year, month, day) {
                     label: '純粋アルコール量',
                     data: chart_data,
                     borderColor: 'rgb(255, 0, 0, 1)',
+                    backgroundColor: "rgba(255,0,0,1)",
+                    pointRadius: 10,
+                    fill: false
                 }
             ]
         },
@@ -47,7 +50,8 @@ function init_chart(drink_data, year, month, day) {
                         suggestedMax: 10,
                         suggestedMin: 0,
                         stepSize: 10,
-                        fontSize: 18
+                        fontSize: 18,
+                        min: -1,
                     }
                 }],
                 xAxes: [{
@@ -102,7 +106,7 @@ function init_table(data, year, month, day) {
 }
 
 function get_date() {
-    let date = new Date(2020, 6, 25);
+    let date = new Date();
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
     let day = date.getDate();

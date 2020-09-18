@@ -1,6 +1,6 @@
 var base_url = ''
 if (window.location.href.indexOf('.jp') >= 0 || window.location.href.indexOf('.com') >= 0) {
-    base_url = '/drinks'
+    base_url = '/drink'
 }
 
 $(function () {

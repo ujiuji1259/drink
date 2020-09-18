@@ -2,7 +2,7 @@ import logging
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 import datetime
-from flask import Flask, render_template, request, url_for, redirect, Markup, make_response, jsonify
+from flask import Flask, render_template, request, url_for, redirect, Markup, jsonify, make_response
 from flask_login import login_user, logout_user, login_required, LoginManager, UserMixin, current_user
 import json
 from classification_rule import Classifier
@@ -16,10 +16,10 @@ from data_structure import UserInformation, Buffer
 tmp_buffer = Buffer()
 user_instances = {}
 
-USER_FILE_PATH = './users/'
-DRINK_FILE_PATH = './drink_num/'
-DRINK_CHART_PATH = './drink_chart/'
-USER_PICKLE_FILE_PATH = './users_pkl/'
+USER_FILE_PATH = '/home/ujiie/narrative/users/'
+DRINK_FILE_PATH = '/home/ujiie/narrative/drink_num/'
+DRINK_CHART_PATH = '/home/ujiie/narrative/drink_chart/'
+USER_PICKLE_FILE_PATH = '/home/ujiie/narrative/users_pkl/'
 liqueur = {'beer':14, 'syo':22, 'wine':12, 'highball':22, 'jap':22, 'other':15}
 liqueur_to_word = {'beer':'ビール（350ml）', 'syo':'焼酎（水割り 180ml）', 'wine':'ワイン（グラス 120ml）', 'highball':'ハイボール（350ml）', 'other':'その他', 'jap':'日本酒（1合）'}
 date = {}
@@ -63,9 +63,9 @@ class User(UserMixin):
         return self.id
 
 
-LOGFILE = "./drink.log"
+LOGFILE = "/home/ujiie/narrative/drink.log"
 
-app = Flask(__name__, template_folder="./")
+app = Flask(__name__, template_folder="/home/ujiie/narrative", static_folder="/home/ujiie/narrative/static")
 app.logger.setLevel(logging.DEBUG)
 app.config['SECRET_KEY'] = "secret"
 fh = logging.FileHandler(LOGFILE)
@@ -161,28 +161,56 @@ def admin():
     if current_user.name != 'admin':
         return render_template('index.html', name=current_user.name)
 
+    """
     if request.method == "GET":
         users = list(name2id.keys())
         return render_template('admin_top.html', usernames=users)
     else:
-        name = request.form["username"]
-        """
-        load_user_data(user_information, USER_FILE_PATH, name)
-        data = user_information[name]
+    """
+    name = request.form["username"]
+    """
+    load_user_data(user_information, USER_FILE_PATH, name)
+    data = user_information[name]
 
-        load_user_data(drink_chart_data, DRINK_CHART_PATH, name)
-        drink_data = drink_chart_data[name]
-        """
-        if name in user_instances:
-            user_instances[name].load_file()
-        else:
-            user_instances[name] = UserInformation(name, USER_PICKLE_FILE_PATH, DRINK_FILE_PATH, DRINK_CHART_PATH)
-            user_instances[name].load_file()
+    load_user_data(drink_chart_data, DRINK_CHART_PATH, name)
+    drink_data = drink_chart_data[name]
+    """
+    if name in user_instances:
+        user_instances[name].load_file()
+    else:
+        user_instances[name] = UserInformation(name, USER_PICKLE_FILE_PATH, DRINK_FILE_PATH, DRINK_CHART_PATH)
+        user_instances[name].load_file()
 
-        instance = user_instances[name]
-        data = instance.get_user_format()
-        drink_data = instance.get_chart_format()
-        return render_template('admin.html', data=data, drink_data=drink_data, username=name)
+    instance = user_instances[name]
+    data = instance.get_user_format()
+    drink_data = instance.get_chart_format()
+    return render_template('admin2.html', data=data, drink_data=drink_data, username=name)
+
+
+@app.route('/admin2', methods=['POST', 'GET'])
+def admin2():
+    if current_user.name != 'admin':
+        return render_template('index.html', name=current_user.name)
+
+    if request.method == "GET":
+        users = list(name2id.keys())
+        return render_template('admin2.html', usernames=users)
+
+
+@app.route('/get_admin_data', methods=['POST'])
+def get_admin_data():
+    name = request.form["username"]
+    if name in user_instances:
+        user_instances[name].load_file()
+    else:
+        user_instances[name] = UserInformation(name, USER_PICKLE_FILE_PATH, DRINK_FILE_PATH, DRINK_CHART_PATH)
+        user_instances[name].load_file()
+
+    instance = user_instances[name]
+    data = instance.get_user_format()
+    drink_data = instance.get_chart_format()
+    response = jsonify({'data': data, 'drink_data': drink_data})
+    return make_response(response)
 
 
 @app.route('/logout')
@@ -223,7 +251,7 @@ def top_page():
 
         date_list = list(user_instances[current_user.name].input_dict.keys())
 
-        #return render_template('index2.html', name=current_user.name, date_list=date_list)
+
         return render_template('index.html', name=current_user.name, date_list=date_list)
     else:
         return redirect(url_for('login', modal="false"))
@@ -231,7 +259,24 @@ def top_page():
 
 @app.route('/diary/<target_date>', methods=["GET"])
 def diary(target_date):
-    return render_template('diary.html', data=dairy_data(target_date))
+    instance = user_instances[current_user.name].load_instance(target_date)
+    if instance is not None:
+        return redirect(url_for("top_page"))
+
+    tmp_buffer.add_buffer(current_user.name, target_date, instance)
+    bu = tmp_buffer.get_instance(current_user.name)
+
+    initial_value = {}
+    for k in liqueur.keys():
+        if k in bu.alc_dict:
+            initial_value[k] = str(bu.alc_dict[k])
+        else:
+            initial_value[k] = str(0)
+
+    initial_value['other_re'] = bu.other
+    initial_value['text'] = bu.text
+
+    return render_template('diary.html', data=initial_value)
 
 @app.route('/past_data/<target_date>', methods=["GET"])
 def past_data(target_date):
@@ -288,8 +333,6 @@ def drink():
         instance.set_alc_dict(liq_num)
         instance.set_other(other_re)
 
-        user_instances[current_user.name].save_instance(instance)
-        user_instances[current_user.name].save_file()
 
         return redirect(url_for("analysis", text=reason))
 
@@ -305,6 +348,11 @@ def nondrink():
         instance = tmp_buffer.get_instance(current_user.name)
         instance.set_text(reason)
         instance.set_alc_dict({'beer':0, 'syo':0, 'wine':0, 'highball':0, 'other':0, 'jap':0, 'other':0})
+
+        """
+        user_instances[current_user.name].save_instance(instance)
+        user_instances[current_user.name].save_file()
+        """
         
 
         return redirect(url_for("analysis", text=reason))
@@ -327,6 +375,9 @@ def analysis(text):
 
     nes = [('red', w) for w in nes]
 
+    user_instances[current_user.name].save_instance(instance)
+    user_instances[current_user.name].save_file()
+
     return render_template("analysis.html", text=annotated, tags=tags+nes, raw_text=text, episode=e)
 
 
@@ -338,61 +389,6 @@ def save():
 
     return redirect(url_for('top_page'))
 
-
-############################
-# updated by GAO from here #
-############################
-def dairy_data(target_date):
-    instance = user_instances[current_user.name].load_instance(target_date)
-    if instance is not None:
-        return redirect(url_for("top_page"))
-
-    tmp_buffer.add_buffer(current_user.name, target_date, instance)
-    bu = tmp_buffer.get_instance(current_user.name)
-
-    initial_value = {}
-    for k in liqueur.keys():
-        if k in bu.alc_dict:
-            initial_value[k] = str(bu.alc_dict[k])
-        else:
-            initial_value[k] = str(0)
-
-    initial_value['other_re'] = bu.other
-    initial_value['text'] = bu.text
-    return initial_value
-
-@app.route('/get_dairy_value/<target_date>')
-def get_dairy_value(target_date):
-    return dairy_data(target_date)
-
-
-@app.route('/admin2', methods=['POST', 'GET'])
-def admin2():
-    if current_user.name != 'admin':
-        return render_template('index.html', name=current_user.name)
-
-    if request.method == "GET":
-        users = list(name2id.keys())
-        return render_template('admin2.html', usernames=users)
-
-
-@app.route('/get_admin_data', methods=['POST'])
-def get_admin_data():
-    name = request.form["username"]
-    if name in user_instances:
-        user_instances[name].load_file()
-    else:
-        user_instances[name] = UserInformation(name, USER_PICKLE_FILE_PATH, DRINK_FILE_PATH, DRINK_CHART_PATH)
-        user_instances[name].load_file()
-
-    instance = user_instances[name]
-    data = instance.get_user_format()
-    drink_data = instance.get_chart_format()
-    response = jsonify({'data': data, 'drink_data': drink_data})
-    return make_response(response)
-
-
 if __name__ == "__main__":
-    #app.run(port="8093", host="0.0.0.0", debug=True)
     app.run(port="8006", host="0.0.0.0", debug=True)
 

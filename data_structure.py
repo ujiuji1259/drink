@@ -53,7 +53,11 @@ class InputInstance(object):
         return {"extendedProps":{"imageurl":self.image_url}}
 
     def get_user_format(self):
-        return {"tags":self.tags, "nes":self.nes, "text":self.text, "alc":self.alc_dict}
+        if self.tags and len(self.tags[0]) > 1:
+            tags = [t[1] for t in self.tags]
+        else:
+            tags = self.tags
+        return {"tags":tags, "nes":self.nes, "text":self.text, "alc":self.alc_dict}
 
     def get_chart_format(self):
         return self.get_alc_sum()

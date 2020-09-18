@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="build/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="../static/drink_common.css">
+        <link rel="stylesheet" href="../static/css/base.css">
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -19,6 +21,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
         <script src="http://aoi.naist.jp/~ujiie/spinner.js"></script>
+        <script src="../static/js/base.js"></script>
     <script>
         function jump_top(){
         location.href = 'http://aoi.naist.jp/drink/';
@@ -44,6 +47,24 @@
 
     </head>
     <body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand jump_top" href="#">
+        <img src="../static/naist_logo_white.png" alt="" style="max-height:50px;">
+        <img src="../static/unnamed_white.png" alt="" style="max-height:50px;">
+    </a>
+    <span class="navbar-brand" style="flex-basis: 260px;"><strong class="title">一行日記</strong></span>
+    <ul class="navbar-nav">
+        {% if current_user.name == "admin" %}
+        <li class="nav-item">
+            <a href="#" class="nav-link jump_admin">管理画面</a>
+        </li>
+        {% endif %}
+        <li class="nav-item">
+            <a href="#" class="nav-link jump_logout">ログアウト</a>
+        </li>
+    </ul>
+</nav>
+<!--
         <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand" href="/"><img src="http://aoi.naist.jp/~ujiie/naist_logo.jpg" alt="" style="max-height:50px;"></a>
             <a class="navbar-brand" href="/"><img src="http://aoi.naist.jp/~ujiie/unnamed.png" alt="" style="max-height:50px;"></a>
@@ -59,6 +80,7 @@
                 </ul>
             </div>
         </nav>
+        -->
 
         <div class="container-fluid">
             <div class='row mt-3'>
