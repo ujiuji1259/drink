@@ -70,13 +70,33 @@ def convert_tags_to_html(text, tags, tag2value):
 
 
 class NER(object):
-    def __init__(self, keywords, colors):
+    def __init__(self, keywords, colors, path):
         """
         keywords:   {"DP": [""] ...}
         colors:     {"DP":"priority" ..}
         """
         self.keywords = keywords
         self.colors = colors
+
+        self._load_keywords(path)
+
+    def add_hashtag(self, text):
+        """
+        input:  "ノンアルコールビールを飲んで，ビールを我慢する"
+        output: "<span>ノンアルコールビール</span>を飲んで，<span>ビール</span>を我慢する"
+        """
+        spans = []
+        words = []
+        for v in self.dtoc.keys():
+            iters = re.finditer("(" + "|".join(v) + ")", text)
+            for ite in iters:
+                s_pos, e_pos = ite.start(), ite.end()
+                words.append(ite.groups()[0])
+                heapq.heappush(spans, (s_pos - e_pos, s_pos, e_pos, self.dtoc[words[-1]]))
+
+        tags = specify_char_tag(len(text), spans)
+        html = convert_tags_to_html(text, tags, self.colors)
+        return html, words
 
     def add_tag(self, text):
         """
@@ -95,6 +115,10 @@ class NER(object):
         tags = specify_char_tag(len(text), spans)
         html = convert_tags_to_html(text, tags, self.colors)
         return html, words
+
+    def _load_keywords(self, path):
+        with open(path, 'r') as f:
+            self.dtoc = json.load(f)
 
 if __name__ == "__main__":
     dic = {}

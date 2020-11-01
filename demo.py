@@ -6,12 +6,14 @@ from flask import Flask, render_template, request, url_for, redirect, Markup, ma
 from flask_login import login_user, logout_user, login_required, LoginManager, UserMixin, current_user
 import json
 from classification_rule import Classifier
-from ner_rule import NER
+#from ner_rule import NER
 from draw_calendar import draw_calendar
 import json
 from datetime import datetime as dt
 from find_similar_episode import Episodes, space_split
 from data_structure import UserInformation, Buffer
+
+from keyword_ner_drink.ner import NER
 
 tmp_buffer = Buffer()
 user_instances = {}
@@ -126,7 +128,8 @@ id2color = {0:"badge-blue", 1:"badge-yellow", 2:"badge-red", 3:"badge-navy",
         13:"badge-maroon"}
 
 classifier = Classifier(keywords)
-ner = NER(dic, tag2value)
+ner = NER(dic, tag2value, '/home/ujiie/drink/keyword_ner_drink/keywords.json')
+#ner = NER('/home/ujiie/drink/keyword_ner_drink/keywords.json')
 
 users = {0: User(0, 'sociocom', 'social405'), 1: User(1, 'sociocom2', 'social405'), 2: User(2, '関西医科大学', 'KMU'), 3: User(3, '荒牧', 'aramaki'), 4: User(4, 'admin', 'admin'), 5: User(5, 'yamashiki', 'yamashiki-lmu'), 6: User(6, 'ikeda', 'ikeda-kmu'), 7: User(7, 'ito', 'ito'), 8: User(8, 'yoshii', 'yoshii-kmu')}
 name2id = {'sociocom':0, 'sociocom2':1, '関西医科大学':2, '荒牧':3, 'admin':4, 'yamashiki':5, 'ikeda':6, 'ito':7, 'yoshii':8}
@@ -315,6 +318,7 @@ def nondrink():
 def analysis(text):
     e = episode.find_similar_episode([text], 10)[0][0]
     annotated, nes = ner.add_tag(text)
+    hash_annotated, hashtags = ner.add_hashtag(text)
     annotated = Markup(annotated)
     tags = classifier.classify(text)
     tags = [(id2color[hashtag2value[t]], t) for t in tags]
